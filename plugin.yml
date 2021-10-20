@@ -1,0 +1,13 @@
+version: 1.0
+name: TagPlugin
+main: dev.leho.tagplugin.Main
+author: Leho
+description: idk play tag i guess
+commands:
+   starttag:
+      aliases: []
+      description: []
+   stoptag:
+      aliases: []
+      description: []
+      
