@@ -1,6 +1,6 @@
 version: 1.0
 name: TagPlugin
-main: dev.leho.tagplugin.Main
+main: dev.leho.tagplugin.TagPlugin
 author: Leho
 description: idk play tag i guess
 commands:
