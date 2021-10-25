@@ -1,4 +1,4 @@
-# minecraft_tag_minigame
+# minecraft_tnt_tag_minigame
 A small plugin to play tnt tag in minecraft
 
 # Usage
