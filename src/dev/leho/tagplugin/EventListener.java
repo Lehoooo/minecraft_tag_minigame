@@ -19,6 +19,8 @@ public class EventListener implements Listener {
 	private final TagPlugin tp;
 	public int hitsCounter = 0;
 	public String winner;
+	public Player whoWasHit2;
+	public Player whoHit2;
 	
 		
 	public EventListener(TagPlugin tp) {
@@ -33,6 +35,10 @@ public class EventListener implements Listener {
 			if (e.getEntity() instanceof Player && e.getDamager() instanceof Player) {
 	             Player whoWasHit = (Player) e.getEntity();
 	             Player whoHit = (Player) e.getDamager();
+	             
+	             whoWasHit2 = whoWasHit;
+	             whoHit2 = whoHit;
+	             
 	             winner = whoHit.getDisplayName();
 	             
 	             
@@ -73,6 +79,14 @@ public class EventListener implements Listener {
 			tp.setTagging(false);
             Bukkit.getServer().broadcastMessage("There has been " + hitsCounter + " Hits! Game Over. " + winner.toString() + " Wins!");
             hitsCounter = 0;
+            whoWasHit2.removePotionEffect(PotionEffectType.SPEED);
+            whoHit2.removePotionEffect(PotionEffectType.SPEED);
+            
+            whoHit2.getInventory().setHelmet(new ItemStack(Material.AIR));
+            whoWasHit2.getInventory().setHelmet(new ItemStack(Material.AIR));
+
+
+
 
 		}
 	}
